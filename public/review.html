@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bewertung abgeben – ReviewBoost</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="review-page">
+    <main class="container review-container">
+        <div class="review-card">
+            <h1>Wie war deine Erfahrung bei <span id="businessName">...</span>?</h1>
+            <p class="review-subtitle">Deine Bewertung hilft uns, besser zu werden.</p>
+            
+            <div class="star-rating" id="starRating">
+                <span class="star" data-rating="1">⭐</span>
+                <span class="star" data-rating="2">⭐</span>
+                <span class="star" data-rating="3">⭐</span>
+                <span class="star" data-rating="4">⭐</span>
+                <span class="star" data-rating="5">⭐</span>
+            </div>
+            <p id="ratingText" class="rating-hint">Wähle deine Bewertung</p>
+
+            <div id="feedbackSection" class="feedback-section" style="display: none;">
+                <textarea id="feedbackText" placeholder="Was können wir verbessern? (optional)" maxlength="500"></textarea>
+            </div>
+
+            <button id="submitReview" class="btn btn-primary btn-lg" disabled>Bewertung absenden</button>
+            <p class="privacy-note">🔒 Keine IP-Speicherung, keine Cookies</p>
+        </div>
+    </main>
+    <script src="js/review.js"></script>
+</body>
+</html>
