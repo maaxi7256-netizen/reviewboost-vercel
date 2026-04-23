@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard – ReviewBoost</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">⭐ ReviewBoost</a>
+            <div class="nav-links">
+                <span id="userName"></span>
+                <a href="#" onclick="logout()">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container dashboard">
+        <h1>Dashboard</h1>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="statScans">0</div>
+                <div class="stat-label">QR-Code Scans</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="statReviews">0</div>
+                <div class="stat-label">Bewertungen gesamt</div>
+            </div>
+            <div class="stat-card stat-positive">
+                <div class="stat-number" id="statPositive">0</div>
+                <div class="stat-label">Weiterleitungen zu Google</div>
+            </div>
+            <div class="stat-card stat-negative">
+                <div class="stat-number" id="statNegative">0</div>
+                <div class="stat-label">Negative abgefangen</div>
+            </div>
+        </div>
+
+        <div class="qr-section">
+            <h2>Dein Bewertungs-QR-Code</h2>
+            <div class="qr-container">
+                <img id="qrImage" src="" alt="Bewertungs-QR-Code">
+                <div class="qr-instructions">
+                    <p>📱 Drucke diesen QR-Code aus:</p>
+                    <ul>
+                        <li>Auf dem Kassenzettel</li>
+                        <li>Als Tischaufsteller</li>
+                        <li>Auf deiner Rechnung</li>
+                        <li>Im Schaufenster</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="downloadQR()">QR-Code herunterladen</button>
+                </div>
+            </div>
+            <div class="review-link">
+                <p>Oder teile den Link:</p>
+                <div class="link-copy">
+                    <input type="text" id="reviewLink" readonly>
+                    <button class="btn btn-primary" onclick="copyLink()">Kopieren</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="recent-reviews">
+            <h2>Letzte Bewertungen</h2>
+            <div id="reviewsList">
+                <p>Noch keine Bewertungen vorhanden.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
